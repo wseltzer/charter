@@ -3,7 +3,7 @@ Path Layer UDP Substrate (PLUS)
 
 The PLUS working group's goal is to define a common shim layer atop the User
 Datagram Protocol (UDP) to provide a transport-independent method to signal
-flow semantics under transport and application control, necessary to enable
+flow semantics under transport and application control, to support
 the deployment of new, encrypted transport protocols within the existing
 Internet. UDP provides compatibility with currently deployed middleboxes as
 well as ubiquitous support in endpoints, and supports userspace implementation
@@ -18,7 +18,7 @@ payload, a practice made possible when these are sent in the clear.
 
 In order to support more ubiquitous deployment of encryption, and the
 encryption of transport headers to allow deployment of new transport
-protocols, explicit in-band signaling must be added to the stack. This
+protocols, the working group suggests that explicit in-band signaling be added to the stack. This
 signaling must be transport protocol independent, and the types of information
 signaled must be based on characteristics that can be independently verified
 by devices on path, or that can be usefully applied without requiring a trust
@@ -61,7 +61,7 @@ This is important to avoid future implicit treatment and resulting
 ossification, as well as to minimize the privacy risks presented by explicit
 cooperation.
 
-Given that the primary goal of PLUS is to enable the deployment of transport
+Given that the primary goal of PLUS is to support the deployment of transport
 protocols with encrypted headers, we assume that the higher-layer protocol can
 provide an encryption context that can be used by PLUS to provide
 authentication, integrity, and encryption where needed. The primary threat
